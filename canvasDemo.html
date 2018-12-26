@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas 2d图形绘制</title>
+</head>
+<body>
+    <canvas id='can' height="500" width="500"></canvas>
+    <img id="yilidan" src="./yilidan.jpg" alt="" style="display:none">
+    <script>   
+        var canvas = document.getElementById('can')
+        var ctx = canvas.getContext('2d')
+
+        // 画线
+        // ctx.moveTo(100,100);
+        // ctx.lineTo(300,300);
+        // ctx.lineTo(100,200);
+        // ctx.stroke();
+
+        // 画圆
+        // ctx.fillStyle='#aaa';
+        // ctx.beginPath();
+        // // (参数：中心x,中心y,半径r,起始角度0，结束角度2π)
+        // ctx.arc(200,200,200,0,2*Math.PI,true);
+        // ctx.closePath();
+        // // ctx.stroke();//画空心圆（不需要fillStyle）
+        // ctx.fill();//画实心圆
+
+        // 彩带
+        // var grd = ctx.createLinearGradient(0,0,500,500);//线性渐变起始点坐标
+        // grd.addColorStop(0,'red')  //百分比 和 颜色
+        // grd.addColorStop(0.5,'blue')
+        // grd.addColorStop(1,'yellow')
+
+        // ctx.fillStyle = grd;
+        // ctx.fillRect(0,0,500,500)
+
+        // 空心字  实心字
+        // ctx.font = '40px Arial';
+        // ctx.fillText('实心字',200,200);
+        // ctx.strokeText('空心字',100,100);
+
+        // 绘制一张图
+        var img = document.getElementById('yilidan');
+        // 图片加载完成，绘制图片
+        img.onload=function(){
+            ctx.drawImage(img,100,100)
+        }
+
+
+
+    </script>
+</body>
+</html>
